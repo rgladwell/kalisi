@@ -6,10 +6,10 @@ interface Fixture<T> {
     fun before()
     fun after()
 
-    fun withFixture(test: T.(T) -> Unit) {
+    fun withFixture(test: (T) -> Unit) {
         before()
         try {
-            fixture.test(fixture)
+            test(fixture)
         } finally {
             after()
         }
