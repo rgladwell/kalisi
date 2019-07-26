@@ -4,12 +4,13 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>alisi</groupId>
-    <artifactId>alisi</artifactId>
+    <groupId>kalisi</groupId>
+    <artifactId>kalisi</artifactId>
     <version>0.0.0</version>
     <packaging>jar</packaging>
 
-    <name>Alisi functional HTTP API</name>
+    <name>Kalisi</name>
+    <description>Simple, strongly-type HTTP server library.</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
