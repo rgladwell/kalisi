@@ -1,4 +1,4 @@
-# Kalisi
+# Kalisi [![Build Status](https://travis-ci.org/rgladwell/kalisi.svg?branch=master)](https://travis-ci.org/rgladwell/kalisi)
 
 Functional HTTP library for Kotlin.
 
