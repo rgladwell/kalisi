@@ -27,7 +27,7 @@ class Jetty(
                 host = "127.0.0.1"
             }
 
-        server.setConnectors(arrayOf(connector))
+        server.connectors += arrayOf(connector)
 
         return object : Server {
             override fun start() = server.start()
@@ -36,9 +36,9 @@ class Jetty(
         }
     }
 
-}
+    private fun Servlet.asJettyHandler(): HandlerWrapper =
+        ServletContextHandler(SESSIONS).apply {
+            addServlet(ServletHolder(this@asJettyHandler), "/*")
+        }
 
-internal fun Servlet.asJettyHandler(): HandlerWrapper =
-    ServletContextHandler(SESSIONS).apply {
-        addServlet(ServletHolder(this@asJettyHandler), "/*")
-    }
+}
